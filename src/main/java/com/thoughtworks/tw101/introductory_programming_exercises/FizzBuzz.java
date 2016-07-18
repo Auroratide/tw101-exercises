@@ -32,6 +32,8 @@ public class FizzBuzz {
     }
 
     private static void fizzBuzz() {
+        for(int i = 1; i <= 100; ++i) {
 
+        }
     }
 }
