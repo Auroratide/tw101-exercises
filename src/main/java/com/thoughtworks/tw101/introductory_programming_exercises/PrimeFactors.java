@@ -21,14 +21,21 @@ public class PrimeFactors {
 
     //  Note that invalid input, like -30, will return an empty list
         while(n > 1) {
-            int factorCandidate = 2;
-        //  Can be optimized by incrementing by 2 after checking 3, since primes must be odd after 2
-            while(n % factorCandidate != 0)
-                ++factorCandidate;
+            int factorCandidate = 3; // assume not even, then fix if n is
+            if(isDivisible(n, 2))
+                factorCandidate = 2;
+
+            while(!isDivisible(n, factorCandidate))
+                factorCandidate += 2;
+
             factors.add(factorCandidate);
             n /= factorCandidate;
         }
         return factors;
+    }
+
+    private static boolean isDivisible(int factor, int divisor) {
+        return factor % divisor == 0;
     }
 
     private static void printCollection(Collection<?> collection) {
