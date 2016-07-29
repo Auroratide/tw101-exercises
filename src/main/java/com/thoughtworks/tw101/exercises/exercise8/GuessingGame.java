@@ -1,5 +1,6 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
+import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
 
@@ -31,7 +32,7 @@ public class GuessingGame {
      *  =========================================================================*/
     private IGuessingGamePlayer player;
     private GuessingGameMessenger messenger;
-    private ArrayList<Integer> guessHistory;
+    private List<Integer> guessHistory;
     private int numberToGuess;
     private int currentGuess;
 

@@ -41,6 +41,7 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
+    //  starPadding is needed due to the potential for the name to be really long
         int starPadding = NAME.length() / 2 - n + 1;
         for(int i = 0; i < n - 1; ++i) {
             pad(starPadding, " ");
@@ -61,11 +62,6 @@ public class DiamondExercises {
         System.out.print("\n");
     }
 
-/**
- *  Prints count characters to the screen
- *  @param count
- *  @param character
- */
     private static void pad(int count, String character) {
         for(int i = 0; i < count; ++i)
             System.out.print(character);
